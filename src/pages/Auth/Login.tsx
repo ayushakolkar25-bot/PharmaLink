@@ -6,7 +6,7 @@ import {
   Mail,
 } from 'lucide-react'
 import { useState } from 'react'
-import { FormEvent } from 'react'
+import type { FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 function Login() {
