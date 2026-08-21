@@ -402,3 +402,275 @@
     width: 100%;
   }
 }
+
+/* ========================================
+   PHARMALINK HEADER
+   ======================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--color-border);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.header-container {
+  width: min(
+    calc(100% - 2rem),
+    var(--container-max-width)
+  );
+
+  height: var(--header-height);
+
+  margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ========================================
+   BRAND
+   ======================================== */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  display: grid;
+
+  width: 38px;
+  height: 38px;
+
+  place-items: center;
+
+  color: var(--color-text-inverse);
+  background: var(--color-primary-500);
+
+  border-radius: var(--radius-lg);
+
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+}
+
+.brand-name {
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+}
+
+.brand-name span {
+  color: var(--color-primary-500);
+}
+
+/* ========================================
+   DESKTOP NAVIGATION
+   ======================================== */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+
+  margin-left: var(--space-10);
+
+  gap: var(--space-6);
+}
+
+.desktop-nav a {
+  position: relative;
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+
+  transition:
+    color var(--transition-fast);
+}
+
+.desktop-nav a:hover {
+  color: var(--color-primary-500);
+}
+
+/* ========================================
+   HEADER ACTIONS
+   ======================================== */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-4);
+
+  margin-left: auto;
+}
+
+.search-button {
+  display: grid;
+
+  width: 38px;
+  height: 38px;
+
+  place-items: center;
+
+  color: var(--color-text-secondary);
+
+  background: transparent;
+
+  border: 0;
+  border-radius: var(--radius-full);
+
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.search-button:hover {
+  color: var(--color-primary-600);
+  background: var(--color-primary-50);
+}
+
+.login-link {
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+
+  transition: color var(--transition-fast);
+}
+
+.login-link:hover {
+  color: var(--color-primary-600);
+}
+
+.join-button {
+  display: inline-flex;
+
+  min-height: 40px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding-inline: var(--space-5);
+
+  color: var(--color-text-inverse);
+  background: var(--color-primary-500);
+
+  border-radius: var(--radius-md);
+
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.join-button:hover {
+  background: var(--color-primary-600);
+
+  transform: translateY(-1px);
+
+  box-shadow: var(--shadow-sm);
+}
+
+/* ========================================
+   MOBILE MENU
+   ======================================== */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  margin-left: auto;
+
+  place-items: center;
+
+  color: var(--color-text-primary);
+
+  background: transparent;
+
+  border: 0;
+  border-radius: var(--radius-md);
+}
+
+.mobile-menu-button:hover {
+  background: var(--color-gray-100);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 900px) {
+  .desktop-nav,
+  .header-actions {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: grid;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    width: calc(100% - 1.5rem);
+  }
+
+  .brand-name {
+    font-size: var(--font-size-md);
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* ========================================
+   TEMPORARY HEADER TEST
+   ======================================== */
+
+.header-test {
+  min-height: calc(100vh - var(--header-height));
+
+  display: grid;
+  align-items: center;
+
+  padding-block: var(--space-16);
+}
+
+.header-test .container {
+  max-width: 900px;
+}
+
+.header-test h1 {
+  max-width: 800px;
+  margin-top: var(--space-4);
+}
+
+.header-test p {
+  max-width: 680px;
+  margin-top: var(--space-6);
+
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
