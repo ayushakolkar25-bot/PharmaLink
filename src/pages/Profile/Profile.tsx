@@ -1,10 +1,7 @@
 import {
   ArrowLeft,
-  BriefcaseBusiness,
-  GraduationCap,
   MoreHorizontal,
   Pencil,
-  Search,
   Share2,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'

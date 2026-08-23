@@ -1,18 +1,11 @@
 import {
-  Bell,
-  Bookmark,
   BriefcaseBusiness,
-  CalendarDays,
   ChevronRight,
   FlaskConical,
-  GraduationCap,
   Home,
-  Menu,
   MessageCircle,
   MoreHorizontal,
   Network,
-  Search,
-  Settings,
   ArrowRight,
   Users,
 } from 'lucide-react'
