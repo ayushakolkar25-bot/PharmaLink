@@ -7,7 +7,7 @@ import {
   User,
 } from 'lucide-react'
 import { useState } from 'react'
-import type{ FormEvent } from 'react'
+import type { FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 function Register() {
@@ -51,7 +51,7 @@ function Register() {
       The next step will be professional identity selection.
     */
 
-    navigate('/onboarding')
+    navigate('/feed')
   }
 
   return (

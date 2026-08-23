@@ -9,78 +9,66 @@ import Landing from '../pages/Landing/Landing'
 import AuthLayout from '../pages/Auth/AuthLayout'
 import Login from '../pages/Auth/Login'
 import Register from '../pages/Auth/Register'
+import Feed from '../pages/Feed/Feed'
+import Profile from '../pages/Profile/Profile'
+
+import { AuthProvider } from '../stores/authStore'
 
 function AppRouter() {
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Public */}
-        <Route
-          path="/"
-          element={<Landing />}
-        />
+      <AuthProvider>
+        <Routes>
 
-        {/* Authentication */}
-        <Route
-          element={<AuthLayout />}
-        >
+          {/* Public */}
+
           <Route
-            path="/login"
-            element={<Login />}
+            path="/"
+            element={<Landing />}
+          />
+
+          {/* Application */}
+
+          <Route
+            path="/feed"
+            element={<Feed />}
           />
 
           <Route
-            path="/register"
-            element={<Register />}
+            path="/profile"
+            element={<Profile />}
           />
-        </Route>
 
-        {/* Temporary onboarding placeholder */}
-        <Route
-          path="/onboarding"
-          element={
-            <div
-              style={{
-                minHeight: '100vh',
-                display: 'grid',
-                placeItems: 'center',
-                fontFamily: 'inherit',
-              }}
-            >
-              <div
-                style={{
-                  textAlign: 'center',
-                  padding: '30px',
-                }}
-              >
-                <h1>
-                  Professional Identity
-                </h1>
+          {/* Authentication */}
 
-                <p
-                  style={{
-                    marginTop: '10px',
-                    color: '#687783',
-                  }}
-                >
-                  Onboarding is our next authentication task.
-                </p>
-              </div>
-            </div>
-          }
-        />
-
-        {/* Fallback */}
-        <Route
-          path="*"
-          element={
-            <Navigate
-              to="/"
-              replace
+          <Route
+            element={<AuthLayout />}
+          >
+            <Route
+              path="/login"
+              element={<Login />}
             />
-          }
-        />
-      </Routes>
+
+            <Route
+              path="/register"
+              element={<Register />}
+            />
+          </Route>
+
+          {/* Fallback */}
+
+          <Route
+            path="*"
+            element={
+              <Navigate
+                to="/"
+                replace
+              />
+            }
+          />
+
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   )
 }
