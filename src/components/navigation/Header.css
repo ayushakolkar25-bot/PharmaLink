@@ -1,0 +1,825 @@
+/* ============================================================
+   PHARMALINK HEADER — DESKTOP REFINEMENT
+   Drop-in replacement for Header.css
+   ============================================================ */
+
+.pharmalink-header,
+.pharmalink-header *,
+.pharmalink-mobile-navigation,
+.pharmalink-mobile-navigation * {
+  box-sizing: border-box;
+}
+
+.pharmalink-header {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  height: 68px;
+  border-bottom: 1px solid #e1e7e4;
+  background: #fff;
+}
+
+.pharmalink-header-inner {
+  width: calc(100% - 40px);
+  max-width: 1680px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ============================================================
+   BRAND
+   ============================================================ */
+
+.pharmalink-header-brand {
+  flex: 0 0 210px;
+  width: 210px;
+  min-width: 0;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #17212b;
+  text-decoration: none;
+}
+
+.pharmalink-header-logo {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #006b4f;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pharmalink-header-name {
+  display: inline-block;
+  color: #17212b;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.pharmalink-header-name span {
+  color: #006b4f;
+}
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+
+.pharmalink-header-search {
+  position: relative;
+  flex: 0 1 390px;
+  width: 390px;
+  min-width: 270px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px;
+  border: 1px solid #d8e2de;
+  border-radius: 9px;
+  background: #f6f9f8;
+  color: #63747e;
+}
+
+.pharmalink-header-search:focus-within {
+  border-color: #87b8a8;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 107, 79, 0.06);
+}
+
+.pharmalink-header-search-icon {
+  flex: 0 0 auto;
+  color: #596b75;
+}
+
+.pharmalink-header-search input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #263640;
+  font: inherit;
+  font-size: 13px;
+}
+
+.pharmalink-header-search input::placeholder {
+  color: #87959d;
+}
+
+.pharmalink-header-search-clear {
+  width: 27px;
+  height: 27px;
+  flex: 0 0 27px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #708089;
+  cursor: pointer;
+}
+
+.pharmalink-header-search-clear:hover {
+  background: #eaf0ed;
+}
+
+/* ============================================================
+   DESKTOP NAV
+   ============================================================ */
+
+.pharmalink-header-nav {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  margin-left: auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 0;
+}
+
+.pharmalink-header-nav-item,
+.pharmalink-header-profile,
+.pharmalink-header-business,
+.pharmalink-header-learning {
+  position: relative;
+  flex: 0 1 auto;
+  min-width: 68px;
+  height: 100%;
+  padding: 5px 8px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #65747d;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pharmalink-header-nav-item:hover,
+.pharmalink-header-profile:hover,
+.pharmalink-header-business:hover,
+.pharmalink-header-learning:hover,
+.pharmalink-header-profile.menu-open,
+.pharmalink-header-business.menu-open {
+  color: #006b4f;
+  background: transparent;
+}
+
+.pharmalink-header-nav-item.active,
+.pharmalink-header-profile.active,
+.pharmalink-header-learning.active {
+  color: #006b4f;
+}
+
+.pharmalink-header-nav-item.active::after,
+.pharmalink-header-profile.active::after,
+.pharmalink-header-nav-messaging::after,
+.pharmalink-header-learning.active::after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+  left: 8px;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: #006b4f;
+}
+
+.pharmalink-header-nav-icon,
+.pharmalink-header-business-icon,
+.pharmalink-header-learning-icon {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pharmalink-header-nav-icon svg,
+.pharmalink-header-business-icon svg,
+.pharmalink-header-learning-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.9;
+}
+
+.pharmalink-header-notification {
+  position: absolute;
+  top: -4px;
+  right: 2px;
+  min-width: 15px;
+  height: 15px;
+  display: grid;
+  place-items: center;
+  padding: 0 3px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: #c92538;
+  color: #fff;
+  font-size: 7px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* ============================================================
+   PROFILE
+   ============================================================ */
+
+.pharmalink-header-profile-wrapper,
+.pharmalink-header-business-wrapper {
+  position: relative;
+  flex: 0 0 auto;
+  height: 100%;
+}
+
+.pharmalink-header-profile {
+  min-width: 68px;
+}
+
+.pharmalink-header-avatar {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #4169e1;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.pharmalink-header-profile-label,
+.pharmalink-header-business-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.pharmalink-header-profile-label svg,
+.pharmalink-header-business-label svg {
+  transition: transform 140ms ease;
+}
+
+.pharmalink-header-profile-label svg.rotated,
+.pharmalink-header-business-label svg.rotated {
+  transform: rotate(180deg);
+}
+
+/* ============================================================
+   DIVIDER / BUSINESS / LEARNING
+   ============================================================ */
+
+.pharmalink-header-divider {
+  width: 1px;
+  height: 38px;
+  margin: 0 7px;
+  flex: 0 0 1px;
+  background: #dfe6e3;
+}
+
+.pharmalink-header-business {
+  min-width: 108px;
+}
+
+.pharmalink-header-learning {
+  min-width: 76px;
+}
+
+/* ============================================================
+   PROFILE DROPDOWN
+   ============================================================ */
+
+.pharmalink-profile-dropdown {
+  position: absolute;
+  top: calc(100% + 7px);
+  right: -4px;
+  z-index: 800;
+  width: 300px;
+  overflow: hidden;
+  border: 1px solid #dce5e2;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 16px 38px rgba(21, 34, 29, 0.14);
+}
+
+.pharmalink-profile-dropdown-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  border-bottom: 1px solid #edf1ef;
+}
+
+.pharmalink-profile-dropdown-avatar {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #4169e1;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.pharmalink-profile-dropdown-user-info {
+  min-width: 0;
+}
+
+.pharmalink-profile-dropdown-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #17212b;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.pharmalink-profile-dropdown-headline,
+.pharmalink-profile-dropdown-organization {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #74828a;
+  font-size: 9px;
+}
+
+.pharmalink-profile-dropdown-headline {
+  margin-top: 3px;
+}
+
+.pharmalink-profile-dropdown-organization {
+  margin-top: 2px;
+}
+
+.pharmalink-profile-dropdown-profile {
+  padding: 11px 13px;
+}
+
+.pharmalink-profile-view-button {
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #0a765a;
+  border-radius: 18px;
+  color: #006b4f;
+  font-size: 10px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.pharmalink-profile-view-button:hover {
+  background: #eef7f3;
+}
+
+.pharmalink-profile-dropdown-section {
+  padding: 8px;
+  border-top: 1px solid #edf1ef;
+}
+
+.pharmalink-profile-dropdown-section-title {
+  padding: 3px 8px 5px;
+  color: #8a969e;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.pharmalink-profile-dropdown-item {
+  width: 100%;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #43535d;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pharmalink-profile-dropdown-item:hover {
+  background: #f2f7f5;
+  color: #006b4f;
+}
+
+.pharmalink-dropdown-text-icon {
+  width: 17px;
+  text-align: center;
+  color: #6f7d84;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.pharmalink-profile-dropdown-footer {
+  padding: 8px;
+  border-top: 1px solid #edf1ef;
+}
+
+.pharmalink-profile-dropdown-signout {
+  width: 100%;
+  min-height: 35px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #b4232f;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 650;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pharmalink-profile-dropdown-signout:hover {
+  background: #fff3f4;
+}
+
+/* ============================================================
+   BUSINESS DROPDOWN
+   ============================================================ */
+
+.pharmalink-business-dropdown {
+  position: absolute;
+  top: calc(100% + 7px);
+  right: -5px;
+  z-index: 800;
+  width: min(690px, calc(100vw - 30px));
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  overflow: hidden;
+  border: 1px solid #dce5e2;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 17px 40px rgba(21, 34, 29, 0.14);
+}
+
+.pharmalink-business-column {
+  min-width: 0;
+  padding: 19px;
+}
+
+.pharmalink-business-column + .pharmalink-business-column {
+  border-left: 1px solid #edf1ef;
+  background: #fbfcfc;
+}
+
+.pharmalink-business-column h3 {
+  margin: 0 0 10px;
+  color: #283841;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.pharmalink-business-category {
+  margin: 11px 3px 4px;
+  color: #8a969e;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pharmalink-business-app-item {
+  min-height: 53px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px;
+  border-radius: 8px;
+  color: #23323b;
+  text-decoration: none;
+}
+
+.pharmalink-business-app-item:hover {
+  background: #f0f6f3;
+}
+
+.pharmalink-business-app-icon {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: #edf6f2;
+  color: #006b4f;
+}
+
+.pharmalink-business-app-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.pharmalink-business-app-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pharmalink-business-app-content strong {
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.pharmalink-business-app-content small {
+  color: #7b878e;
+  font-size: 7px;
+  line-height: 1.35;
+}
+
+.pharmalink-business-explore-item {
+  min-height: 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 7px 8px;
+  border-radius: 8px;
+  color: #263740;
+  text-decoration: none;
+}
+
+.pharmalink-business-explore-item:hover {
+  background: #fff;
+}
+
+.pharmalink-business-explore-item strong {
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.pharmalink-business-explore-item span {
+  color: #7b878e;
+  font-size: 7px;
+  line-height: 1.35;
+}
+
+.pharmalink-business-create {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e7ecea;
+}
+
+.pharmalink-business-create a {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 9px;
+  border-radius: 7px;
+  color: #006b4f;
+  font-size: 9px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.pharmalink-business-create a:hover {
+  background: #eef7f3;
+}
+
+.pharmalink-business-create a span {
+  width: 21px;
+  height: 21px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #006b4f;
+  color: #fff;
+  font-size: 15px;
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+.pharmalink-header-mobile-button {
+  display: none;
+  width: 38px;
+  height: 38px;
+  margin-left: auto;
+  place-items: center;
+  border: 1px solid #d9e2df;
+  border-radius: 8px;
+  background: #fff;
+  color: #263640;
+  cursor: pointer;
+}
+
+.pharmalink-mobile-navigation {
+  display: none;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1180px) {
+  .pharmalink-header-inner {
+    width: calc(100% - 24px);
+    gap: 12px;
+  }
+
+  .pharmalink-header-brand {
+    flex-basis: 175px;
+    width: 175px;
+  }
+
+  .pharmalink-header-search {
+    flex-basis: 300px;
+    width: 300px;
+  }
+
+  .pharmalink-header-nav-item,
+  .pharmalink-header-profile,
+  .pharmalink-header-business,
+  .pharmalink-header-learning {
+    min-width: 60px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 9px;
+  }
+
+  .pharmalink-header-business {
+    min-width: 92px;
+  }
+
+  .pharmalink-header-learning {
+    min-width: 64px;
+  }
+}
+
+@media (max-width: 980px) {
+  .pharmalink-header-search {
+    flex-basis: 250px;
+    width: 250px;
+  }
+
+  .pharmalink-header-nav-item,
+  .pharmalink-header-profile,
+  .pharmalink-header-business,
+  .pharmalink-header-learning {
+    min-width: 55px;
+  }
+
+  .pharmalink-header-business {
+    min-width: 82px;
+  }
+}
+
+@media (max-width: 860px) {
+  .pharmalink-header {
+    height: 62px;
+  }
+
+  .pharmalink-header-inner {
+    width: calc(100% - 16px);
+    gap: 9px;
+  }
+
+  .pharmalink-header-nav {
+    display: none;
+  }
+
+  .pharmalink-header-mobile-button {
+    display: grid;
+  }
+
+  .pharmalink-header-search {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    height: 40px;
+  }
+
+  .pharmalink-mobile-navigation {
+    position: fixed;
+    top: 62px;
+    right: 0;
+    left: 0;
+    z-index: 499;
+    display: block;
+    border-bottom: 1px solid #dfe7e4;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(22, 34, 30, 0.08);
+  }
+
+  .pharmalink-mobile-navigation-inner {
+    width: min(100% - 20px, 700px);
+    margin: 0 auto;
+    padding: 9px 0 11px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+
+  .pharmalink-mobile-nav-item {
+    position: relative;
+    min-height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 8px;
+    color: #66757f;
+    font-size: 9px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .pharmalink-mobile-nav-item:hover,
+  .pharmalink-mobile-nav-item.active {
+    background: #eef6f2;
+    color: #006b4f;
+  }
+
+  .pharmalink-mobile-nav-item.active::after {
+    content: '';
+    position: absolute;
+    right: 25%;
+    bottom: 0;
+    left: 25%;
+    height: 2px;
+    border-radius: 2px;
+    background: #006b4f;
+  }
+
+  .pharmalink-mobile-nav-icon {
+    position: relative;
+    display: inline-flex;
+  }
+
+  .pharmalink-mobile-avatar {
+    width: 22px;
+    height: 22px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #4169e1;
+    color: #fff;
+    font-size: 7px;
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 520px) {
+  .pharmalink-header-brand {
+    flex-basis: 40px;
+    width: 40px;
+  }
+
+  .pharmalink-header-name {
+    display: none;
+  }
+
+  .pharmalink-header-search input {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pharmalink-header *,
+  .pharmalink-mobile-navigation * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

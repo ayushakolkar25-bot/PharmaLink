@@ -1,333 +1,499 @@
 /* =========================================================
+
    PHARMALINK FEED
-========================================================= */
+
+\========================================================= */
 
 .feed-page {
+
   min-height: 100vh;
+
   background: #f3f6f5;
+
   color: #17212b;
+
 }
 
 /* =========================================================
+
    HEADER
-========================================================= */
+
+\========================================================= */
 
 .feed-header {
+
   position: sticky;
+
   top: 0;
+
   z-index: 100;
+
   height: 68px;
+
   border-bottom: 1px solid #dfe6e3;
+
   background: rgba(255, 255, 255, 0.97);
+
   backdrop-filter: blur(14px);
+
 }
 
 .feed-header-inner {
+
   width: min(1320px, calc(100% - 40px));
+
   height: 100%;
+
   margin: 0 auto;
 
   display: flex;
+
   align-items: center;
+
   gap: 24px;
+
 }
 
 /* Brand */
 
 .feed-brand {
+
   display: flex;
+
   align-items: center;
+
   gap: 9px;
 
   color: #17212b;
+
   text-decoration: none;
 
   flex-shrink: 0;
+
 }
 
 .feed-brand-mark {
+
   width: 37px;
+
   height: 37px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 9px;
+
   background: #006241;
 
   color: #fff;
+
   font-size: 17px;
+
   font-weight: 800;
+
 }
 
 .feed-brand-name {
+
   font-size: 16px;
+
   font-weight: 800;
+
   letter-spacing: -0.04em;
+
 }
 
 .feed-brand-name span {
+
   color: #006241;
+
 }
 
 /* Search */
 
 .feed-search {
+
   width: 290px;
+
   height: 40px;
 
   display: flex;
+
   align-items: center;
+
   gap: 9px;
 
   padding: 0 13px;
 
   border: 1px solid #d8e1de;
+
   border-radius: 8px;
 
   background: #f5f8f7;
+
   color: #71808a;
+
 }
 
-.feed-search:focus-within {
+.feed-search\:focus-within {
+
   border-color: #8abcae;
+
   background: #fff;
+
   box-shadow: 0 0 0 3px rgba(0, 98, 65, 0.06);
+
 }
 
 .feed-search input {
+
   width: 100%;
 
   border: 0;
+
   outline: 0;
+
   background: transparent;
 
   color: #263640;
+
   font-size: 12px;
+
 }
 
 .feed-search input::placeholder {
+
   color: #89959d;
+
 }
 
 /* Navigation */
 
 .feed-main-nav {
+
   height: 100%;
+
   margin-left: auto;
 
   display: flex;
+
   align-items: stretch;
+
   gap: 4px;
+
 }
 
 .feed-nav-item {
+
   position: relative;
 
   min-width: 72px;
+
   padding: 0 9px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 4px;
 
   color: #687681;
+
   text-decoration: none;
 
   font-size: 9px;
+
   font-weight: 600;
 
   transition:
+
     color 160ms ease,
+
     background 160ms ease;
+
 }
 
-.feed-nav-item:hover {
+.feed-nav-item\:hover {
+
   color: #006241;
+
   background: #f5f8f7;
+
 }
 
 .feed-nav-item.active {
+
   color: #006241;
+
 }
 
 .feed-nav-item.active::after {
+
   content: '';
 
   position: absolute;
+
   left: 12px;
+
   right: 12px;
+
   bottom: 0;
 
   height: 3px;
+
   border-radius: 3px 3px 0 0;
 
   background: #006241;
+
 }
 
 .feed-nav-item small {
+
   position: absolute;
+
   top: 9px;
+
   right: 18px;
 
   min-width: 15px;
+
   height: 15px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 50%;
+
   background: #c82333;
 
   color: #fff;
+
   font-size: 7px;
+
   font-weight: 800;
+
 }
 
 .feed-nav-avatar {
+
   width: 23px;
+
   height: 23px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 50%;
+
   background: #4169e1;
 
   color: #fff;
+
   font-size: 7px;
+
   font-weight: 800;
+
 }
 
 .feed-mobile-menu {
+
   display: none;
 
   width: 40px;
+
   height: 40px;
 
   margin-left: auto;
 
   border: 1px solid #dbe4e1;
+
   border-radius: 8px;
 
   background: #fff;
+
   color: #263640;
+
 }
 
 /* =========================================================
+
    MAIN LAYOUT
-========================================================= */
+
+\========================================================= */
 
 .feed-main {
+
   padding: 24px 0 60px;
+
 }
 
 .feed-layout {
+
   width: min(1280px, calc(100% - 40px));
+
   margin: 0 auto;
 
   display: grid;
+
   grid-template-columns: 245px minmax(0, 1fr) 300px;
+
   gap: 20px;
 
   align-items: start;
+
 }
 
 /* =========================================================
+
    LEFT COLUMN
-========================================================= */
+
+\========================================================= */
 
 .feed-left-column {
+
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
+
 }
 
 .feed-profile-card,
+
 .feed-stat-card,
+
 .feed-side-menu,
+
 .feed-composer,
+
 .feed-post,
+
 .feed-discover-card,
+
 .feed-trending {
+
   border: 1px solid #dce5e1;
+
   background: #fff;
+
   border-radius: 10px;
+
 }
 
 /* Profile */
 
 .feed-profile-card {
+
   overflow: hidden;
+
 }
 
 .feed-profile-cover {
+
   height: 74px;
 
   background:
+
     linear-gradient(
+
       135deg,
+
       #006241,
+
       #168a6a
+
     );
+
 }
 
 .feed-profile-content {
+
   position: relative;
+
   padding: 0 17px 18px;
+
 }
 
 .feed-profile-avatar {
+
   width: 64px;
+
   height: 64px;
 
   margin-top: -32px;
+
   margin-bottom: 12px;
 
   display: grid;
+
   place-items: center;
 
   border: 4px solid #fff;
+
   border-radius: 50%;
 
   background: #4169e1;
 
   color: #fff;
+
   font-size: 17px;
+
   font-weight: 800;
 
   box-shadow: 0 4px 12px rgba(23, 33, 43, 0.1);
+
 }
 
 .feed-profile-content h2 {
+
   margin: 0;
 
   color: #17212b;
+
   font-size: 16px;
+
   line-height: 1.2;
+
   letter-spacing: -0.03em;
+
 }
 
 .feed-profile-title {
+
   margin: 5px 0 0;
 
   color: #53626d;
+
   font-size: 10px;
+
   font-weight: 600;
+
 }
 
 .feed-profile-location {
+
   margin: 4px 0 15px;
 
   color: #89959d;
+
   font-size: 9px;
+
 }
 
 .feed-profile-link {
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   padding-top: 12px;
@@ -335,53 +501,77 @@
   border-top: 1px solid #e7ecea;
 
   color: #006241;
+
   font-size: 10px;
+
   font-weight: 800;
+
   text-decoration: none;
+
 }
 
-.feed-profile-link:hover {
+.feed-profile-link\:hover {
+
   color: #004f35;
+
 }
 
 /* Stats */
 
 .feed-stat-card {
+
   padding: 13px 15px;
+
 }
 
 .feed-stat-card a {
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   padding: 7px 0;
 
   color: #53626d;
+
   font-size: 10px;
+
   text-decoration: none;
+
 }
 
 .feed-stat-card a + a {
+
   border-top: 1px solid #edf1ef;
+
 }
 
 .feed-stat-card strong {
+
   color: #006241;
+
   font-size: 11px;
+
 }
 
 /* Side menu */
 
 .feed-side-menu {
+
   padding: 8px;
+
 }
 
 .feed-side-menu a {
+
   min-height: 39px;
 
   display: flex;
+
   align-items: center;
+
   gap: 11px;
 
   padding: 0 9px;
@@ -389,102 +579,149 @@
   border-radius: 7px;
 
   color: #53626d;
+
   font-size: 10px;
+
   font-weight: 600;
+
   text-decoration: none;
+
 }
 
-.feed-side-menu a:hover {
+.feed-side-menu a\:hover {
+
   background: #f1f7f4;
+
   color: #006241;
+
 }
 
 .feed-side-menu svg {
+
   color: #72808a;
+
 }
 
-.feed-side-menu a:hover svg {
+.feed-side-menu a\:hover svg {
+
   color: #006241;
+
 }
 
 /* =========================================================
+
    CENTER COLUMN
-========================================================= */
+
+\========================================================= */
 
 .feed-center-column {
+
   min-width: 0;
 
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
+
 }
 
 .feed-welcome {
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   padding: 4px 2px 5px;
+
 }
 
 .feed-welcome span {
+
   color: #006241;
 
   font-size: 8px;
+
   font-weight: 800;
+
   letter-spacing: 0.16em;
+
 }
 
 .feed-welcome h1 {
+
   margin: 4px 0 0;
 
   color: #17212b;
 
   font-size: 21px;
+
   line-height: 1.1;
+
   letter-spacing: -0.04em;
+
 }
 
 .feed-more-button {
+
   width: 34px;
+
   height: 34px;
 
   display: grid;
+
   place-items: center;
 
   border: 0;
+
   border-radius: 7px;
 
   background: transparent;
+
   color: #71808a;
 
   cursor: pointer;
+
 }
 
-.feed-more-button:hover {
+.feed-more-button\:hover {
+
   background: #eaf1ee;
+
 }
 
 /* Composer */
 
 .feed-composer {
+
   padding: 16px;
+
 }
 
 .feed-composer-top {
+
   display: flex;
+
   align-items: center;
+
   gap: 11px;
+
 }
 
 .feed-composer-avatar,
+
 .feed-post-avatar {
+
   width: 42px;
+
   height: 42px;
 
   flex-shrink: 0;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 50%;
@@ -492,17 +729,23 @@
   background: #4169e1;
 
   color: #fff;
+
   font-size: 10px;
+
   font-weight: 800;
+
 }
 
 .feed-composer-input {
+
   width: 100%;
+
   height: 44px;
 
   padding: 0 16px;
 
   border: 1px solid #d6e0dd;
+
   border-radius: 24px;
 
   background: #fff;
@@ -510,75 +753,109 @@
   color: #71808a;
 
   font-size: 11px;
+
   text-align: left;
 
   cursor: pointer;
+
 }
 
-.feed-composer-input:hover {
+.feed-composer-input\:hover {
+
   border-color: #8fbdae;
+
   background: #f9fbfa;
+
 }
 
 .feed-composer-actions {
+
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
 
   margin-top: 13px;
+
   padding-top: 12px;
 
   border-top: 1px solid #e8eeeb;
+
 }
 
 .feed-composer-actions button {
+
   min-height: 35px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 7px;
 
   border: 0;
+
   background: transparent;
 
   color: #5f6e78;
 
   font-size: 10px;
+
   font-weight: 700;
 
   cursor: pointer;
+
 }
 
-.feed-composer-actions button:hover {
+.feed-composer-actions button\:hover {
+
   color: #006241;
+
   background: #f4f8f6;
+
   border-radius: 6px;
+
 }
 
 .feed-composer-actions svg {
+
   color: #006241;
+
 }
 
 /* Sort */
 
 .feed-sort {
+
   display: flex;
+
   align-items: center;
+
   gap: 8px;
+
 }
 
 .feed-sort > span {
+
   height: 1px;
+
   flex: 1;
+
   background: #dfe6e3;
+
 }
 
 .feed-sort button {
+
   display: flex;
+
   align-items: center;
+
   gap: 3px;
 
   border: 0;
+
   background: transparent;
 
   color: #89959d;
@@ -586,106 +863,157 @@
   font-size: 9px;
 
   cursor: pointer;
+
 }
 
 .feed-sort strong {
+
   color: #44535e;
+
 }
 
 /* Posts */
 
 .feed-post {
+
   overflow: hidden;
+
 }
 
 .feed-post-header {
+
   display: flex;
+
   align-items: center;
+
   gap: 11px;
 
   padding: 16px 16px 10px;
+
 }
 
 .feed-post-avatar {
+
   width: 40px;
+
   height: 40px;
+
 }
 
 .feed-post-avatar.blue {
+
   background: #006241;
+
 }
 
 .feed-post-author {
+
   min-width: 0;
+
   flex: 1;
 
   display: flex;
+
   flex-direction: column;
+
   gap: 3px;
+
 }
 
 .feed-post-author strong {
+
   color: #263640;
+
   font-size: 11px;
+
 }
 
 .feed-post-author span {
+
   color: #8a969e;
+
   font-size: 8px;
+
 }
 
 .feed-post-more {
+
   width: 30px;
+
   height: 30px;
 
   display: grid;
+
   place-items: center;
 
   border: 0;
+
   border-radius: 6px;
 
   background: transparent;
+
   color: #7c8991;
+
 }
 
-.feed-post-more:hover {
+.feed-post-more\:hover {
+
   background: #f1f5f3;
+
 }
 
 .feed-post-body {
+
   padding: 2px 16px 10px;
+
 }
 
 .feed-post-body p {
+
   margin: 0 0 8px;
 
   color: #34434e;
 
   font-size: 11px;
+
   line-height: 1.65;
+
 }
 
-.feed-post-body p:last-child {
+.feed-post-body p\:last-child {
+
   margin-bottom: 0;
+
 }
 
 .feed-post-tags {
+
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 6px;
 
   padding: 5px 16px 14px;
+
 }
 
 .feed-post-tags span {
+
   color: #006241;
+
   font-size: 8px;
+
   font-weight: 700;
+
 }
 
 .feed-post-stats {
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   padding: 10px 16px;
@@ -693,153 +1021,214 @@
   border-top: 1px solid #edf1ef;
 
   color: #8a969e;
+
   font-size: 8px;
+
 }
 
 .feed-post-actions {
+
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
 
   border-top: 1px solid #edf1ef;
+
 }
 
 .feed-post-actions button {
+
   height: 39px;
 
   border: 0;
+
   background: #fff;
 
   color: #65737d;
 
   font-size: 9px;
+
   font-weight: 700;
 
   cursor: pointer;
+
 }
 
-.feed-post-actions button:hover {
+.feed-post-actions button\:hover {
+
   background: #f3f7f5;
+
   color: #006241;
+
 }
 
 /* Opportunity post */
 
 .feed-post-opportunity {
+
   margin: 5px 16px 15px;
 
   display: flex;
+
   align-items: center;
+
   gap: 11px;
 
   padding: 13px;
 
   border: 1px solid #dce7e2;
+
   border-radius: 8px;
 
   background: #f6faf8;
+
 }
 
 .feed-opportunity-icon {
+
   width: 35px;
+
   height: 35px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 7px;
 
   background: #e3f2ec;
+
   color: #006241;
+
 }
 
-.feed-post-opportunity div:nth-child(2) {
-  flex: 1;
-}
 
 .feed-post-opportunity strong,
+
 .feed-post-opportunity span {
+
   display: block;
+
 }
 
 .feed-post-opportunity strong {
+
   color: #263640;
+
   font-size: 10px;
+
 }
 
 .feed-post-opportunity span {
+
   margin-top: 3px;
 
   color: #849099;
+
   font-size: 8px;
+
 }
 
 /* =========================================================
+
    RIGHT COLUMN
-========================================================= */
+
+\========================================================= */
 
 .feed-right-column {
+
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
+
 }
 
 .feed-discover-card {
+
   padding: 16px;
+
 }
 
 .feed-card-heading {
+
   display: flex;
+
   align-items: flex-start;
+
   justify-content: space-between;
+
   gap: 10px;
 
   padding-bottom: 13px;
 
   border-bottom: 1px solid #e7ecea;
+
 }
 
 .feed-card-heading > div {
+
   min-width: 0;
+
 }
 
 .feed-card-heading span {
+
   color: #006241;
 
   font-size: 7px;
+
   font-weight: 800;
+
   letter-spacing: 0.13em;
+
 }
 
 .feed-card-heading h2 {
+
   margin: 5px 0 0;
 
   color: #263640;
 
   font-size: 13px;
+
   line-height: 1.25;
+
   letter-spacing: -0.025em;
+
 }
 
 .feed-card-heading > svg {
+
   color: #006241;
+
   flex-shrink: 0;
+
 }
 
 /* Research */
 
 .feed-research-feature {
+
   padding: 16px 2px 2px;
+
 }
 
 .feed-research-feature > span {
+
   color: #4169e1;
 
   font-size: 7px;
+
   font-weight: 800;
+
   letter-spacing: 0.12em;
+
 }
 
 .feed-research-feature strong {
+
   display: block;
 
   margin-top: 7px;
@@ -847,42 +1236,59 @@
   color: #263640;
 
   font-size: 12px;
+
   line-height: 1.4;
+
 }
 
 .feed-research-feature p {
+
   margin: 7px 0 12px;
 
   color: #85919a;
 
   font-size: 9px;
+
   line-height: 1.6;
+
 }
 
 .feed-research-feature a,
+
 .feed-card-footer-link {
+
   display: inline-flex;
+
   align-items: center;
+
   gap: 5px;
 
   color: #006241;
 
   font-size: 8px;
+
   font-weight: 800;
+
   text-decoration: none;
+
 }
 
 /* Jobs */
 
 .feed-job-list {
+
   margin-top: 4px;
+
 }
 
 .feed-job-item {
+
   min-height: 59px;
 
   display: flex;
+
   align-items: center;
+
   gap: 10px;
 
   padding: 9px 2px;
@@ -890,67 +1296,99 @@
   border-bottom: 1px solid #edf1ef;
 
   color: inherit;
+
   text-decoration: none;
+
 }
 
-.feed-job-item:last-child {
+.feed-job-item\:last-child {
+
   border-bottom: 0;
+
 }
 
-.feed-job-item:hover {
+.feed-job-item\:hover {
+
   color: #006241;
+
 }
 
 .feed-job-item div {
+
   min-width: 0;
+
   flex: 1;
+
 }
 
 .feed-job-item strong,
+
 .feed-job-item span {
+
   display: block;
+
 }
 
 .feed-job-item strong {
+
   color: #33424d;
+
   font-size: 9px;
+
 }
 
 .feed-job-item span {
+
   margin-top: 3px;
+
   color: #8a969e;
+
   font-size: 8px;
+
 }
 
 .feed-card-footer-link {
+
   margin-top: 13px;
+
 }
 
 /* People */
 
 .feed-people-list {
+
   margin-top: 4px;
+
 }
 
 .feed-person {
+
   display: flex;
+
   align-items: center;
+
   gap: 9px;
 
   padding: 11px 0;
 
   border-bottom: 1px solid #edf1ef;
+
 }
 
-.feed-person:last-child {
+.feed-person\:last-child {
+
   border-bottom: 0;
+
 }
 
 .feed-person-avatar {
+
   width: 34px;
+
   height: 34px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 50%;
@@ -958,93 +1396,135 @@
   background: #4169e1;
 
   color: #fff;
+
   font-size: 8px;
+
   font-weight: 800;
+
 }
 
 .feed-person-avatar.blue {
+
   background: #006241;
+
 }
 
 .feed-person-info {
+
   min-width: 0;
+
   flex: 1;
+
 }
 
 .feed-person-info strong,
+
 .feed-person-info span {
+
   display: block;
+
 }
 
 .feed-person-info strong {
+
   color: #33424d;
+
   font-size: 9px;
+
 }
 
 .feed-person-info span {
+
   margin-top: 2px;
 
   overflow: hidden;
 
   color: #8a969e;
+
   font-size: 7px;
+
   text-overflow: ellipsis;
+
   white-space: nowrap;
+
 }
 
 .feed-person button {
+
   width: 25px;
+
   height: 25px;
 
   display: grid;
+
   place-items: center;
 
   border: 1px solid #bcd8ce;
+
   border-radius: 50%;
 
   background: #fff;
+
   color: #006241;
 
   font-size: 15px;
 
   cursor: pointer;
+
 }
 
-.feed-person button:hover {
+.feed-person button\:hover {
+
   background: #006241;
+
   color: #fff;
+
 }
 
 /* Trending */
 
 .feed-trending {
+
   padding: 16px;
+
 }
 
 .feed-trending > span {
+
   color: #006241;
 
   font-size: 7px;
+
   font-weight: 800;
+
   letter-spacing: 0.13em;
+
 }
 
 .feed-trending h2 {
+
   margin: 6px 0 14px;
 
   color: #33424d;
 
   font-size: 12px;
+
   line-height: 1.4;
+
 }
 
 .feed-trending-tags {
+
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 6px;
+
 }
 
 .feed-trending-tags span {
+
   padding: 6px 8px;
 
   border-radius: 5px;
@@ -1054,134 +1534,197 @@
   color: #006241;
 
   font-size: 7px;
+
   font-weight: 700;
+
 }
 
 /* =========================================================
+
    MOBILE BOTTOM NAV
-========================================================= */
+
+\========================================================= */
 
 .feed-bottom-nav {
+
   display: none;
+
 }
 
 /* =========================================================
+
    RESPONSIVE
-========================================================= */
+
+\========================================================= */
 
 @media (max-width: 1100px) {
+
   .feed-layout {
+
     grid-template-columns: 220px minmax(0, 1fr);
+
   }
 
   .feed-right-column {
+
     display: none;
+
   }
 
   .feed-search {
+
     width: 220px;
+
   }
+
 }
 
 @media (max-width: 820px) {
+
   .feed-header {
+
     height: 60px;
+
   }
 
   .feed-header-inner {
+
     width: min(100% - 24px, 700px);
+
     gap: 12px;
+
   }
 
   .feed-search {
+
     flex: 1;
+
     width: auto;
+
   }
 
   .feed-main-nav {
+
     display: none;
+
   }
 
   .feed-mobile-menu {
+
     display: grid;
+
     place-items: center;
+
   }
 
   .feed-main {
+
     padding: 16px 0 80px;
+
   }
 
   .feed-layout {
+
     width: min(100% - 24px, 700px);
 
     display: block;
+
   }
 
   .feed-left-column {
+
     display: none;
+
   }
 
   .feed-welcome h1 {
+
     font-size: 19px;
+
   }
 
   .feed-bottom-nav {
+
     position: fixed;
+
     left: 0;
+
     right: 0;
+
     bottom: 0;
+
     z-index: 100;
 
     height: 62px;
 
     display: grid;
+
     grid-template-columns: repeat(5, 1fr);
 
     border-top: 1px solid #dce5e1;
 
     background: rgba(255, 255, 255, 0.97);
+
     backdrop-filter: blur(14px);
+
   }
 
   .feed-bottom-nav a {
+
     position: relative;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 4px;
 
     color: #7b8992;
 
     font-size: 8px;
+
     font-weight: 700;
 
     text-decoration: none;
+
   }
 
   .feed-bottom-nav a.active {
+
     color: #006241;
+
   }
 
   .feed-bottom-nav a.active::before {
+
     content: '';
 
     position: absolute;
+
     top: 0;
+
     left: 25%;
+
     right: 25%;
 
     height: 2px;
 
     background: #006241;
+
   }
 
   .bottom-avatar {
+
     width: 21px;
+
     height: 21px;
 
     display: grid;
+
     place-items: center;
 
     border-radius: 50%;
@@ -1189,47 +1732,73 @@
     background: #4169e1;
 
     color: #fff;
+
     font-size: 6px;
+
     font-weight: 800;
+
   }
+
 }
 
 @media (max-width: 560px) {
+
   .feed-header-inner {
+
     width: calc(100% - 18px);
+
   }
 
   .feed-brand-name {
+
     display: none;
+
   }
 
   .feed-search {
+
     height: 38px;
+
   }
 
   .feed-search input {
+
     font-size: 11px;
+
   }
 
   .feed-composer-actions span {
+
     font-size: 9px;
+
   }
 
   .feed-composer-actions {
+
     gap: 2px;
+
   }
 
   .feed-post-actions button {
+
     font-size: 8px;
+
   }
+
 }
+
 /* =========================================================
+
    PHARMALINK GLOBAL HEADER
-========================================================= */
+
+\========================================================= */
 
 .pharmalink-header {
+
   position: sticky;
+
   top: 0;
+
   z-index: 100;
 
   height: 68px;
@@ -1239,36 +1808,51 @@
   background: rgba(255, 255, 255, 0.97);
 
   backdrop-filter: blur(14px);
+
 }
 
 .pharmalink-header-inner {
+
   width: min(1280px, calc(100% - 40px));
+
   height: 100%;
+
   margin: 0 auto;
 
   display: flex;
+
   align-items: center;
+
   gap: 24px;
+
 }
 
 /* Brand */
 
 .pharmalink-header-brand {
+
   display: flex;
+
   align-items: center;
+
   gap: 9px;
 
   flex-shrink: 0;
 
   color: #17212b;
+
   text-decoration: none;
+
 }
 
 .pharmalink-header-logo {
+
   width: 37px;
+
   height: 37px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 9px;
@@ -1278,35 +1862,47 @@
   color: #fff;
 
   font-size: 17px;
+
   font-weight: 800;
+
 }
 
 .pharmalink-header-name {
+
   color: #17212b;
 
   font-size: 16px;
+
   font-weight: 800;
 
   letter-spacing: -0.04em;
+
 }
 
 .pharmalink-header-name span {
+
   color: #006241;
+
 }
 
 /* Search */
 
 .pharmalink-header-search {
+
   width: 300px;
+
   height: 40px;
 
   display: flex;
+
   align-items: center;
+
   gap: 9px;
 
   padding: 0 13px;
 
   border: 1px solid #d8e1de;
+
   border-radius: 8px;
 
   background: #f5f8f7;
@@ -1314,23 +1910,33 @@
   color: #71808a;
 
   transition:
+
     border-color 160ms ease,
+
     background 160ms ease,
+
     box-shadow 160ms ease;
+
 }
 
-.pharmalink-header-search:focus-within {
+.pharmalink-header-search\:focus-within {
+
   border-color: #8abcae;
+
   background: #fff;
 
   box-shadow:
+
     0 0 0 3px rgba(0, 98, 65, 0.06);
+
 }
 
 .pharmalink-header-search input {
+
   width: 100%;
 
   border: 0;
+
   outline: 0;
 
   background: transparent;
@@ -1338,35 +1944,51 @@
   color: #263640;
 
   font-family: inherit;
+
   font-size: 11px;
+
 }
 
 .pharmalink-header-search input::placeholder {
+
   color: #89959d;
+
 }
 
 /* Desktop navigation */
 
 .pharmalink-header-nav {
+
   height: 100%;
+
   margin-left: auto;
 
   display: flex;
+
   align-items: stretch;
+
   gap: 2px;
+
 }
 
 .pharmalink-header-nav-item,
+
 .pharmalink-header-profile {
+
   position: relative;
 
   min-width: 66px;
+
   padding: 0 8px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 4px;
 
   border: 0;
@@ -1374,34 +1996,51 @@
   color: #687681;
 
   font-family: inherit;
+
   font-size: 8px;
+
   font-weight: 700;
 
   text-decoration: none;
 
   transition:
+
     color 160ms ease,
+
     background 160ms ease;
+
 }
 
-.pharmalink-header-nav-item:hover,
-.pharmalink-header-profile:hover {
+.pharmalink-header-nav-item\:hover,
+
+.pharmalink-header-profile\:hover {
+
   color: #006241;
+
   background: #f5f8f7;
+
 }
 
 .pharmalink-header-nav-item.active,
+
 .pharmalink-header-profile.active {
+
   color: #006241;
+
 }
 
 .pharmalink-header-nav-item.active::after,
+
 .pharmalink-header-profile.active::after {
+
   content: '';
 
   position: absolute;
+
   left: 11px;
+
   right: 11px;
+
   bottom: 0;
 
   height: 3px;
@@ -1409,29 +2048,37 @@
   border-radius: 3px 3px 0 0;
 
   background: #006241;
+
 }
 
 .pharmalink-header-nav-icon {
+
   position: relative;
 
   display: flex;
+
 }
 
 .pharmalink-header-notification {
+
   position: absolute;
 
   top: -7px;
+
   right: -8px;
 
   min-width: 15px;
+
   height: 15px;
 
   display: grid;
+
   place-items: center;
 
   padding: 0 3px;
 
   border: 2px solid #fff;
+
   border-radius: 20px;
 
   background: #c82333;
@@ -1439,14 +2086,19 @@
   color: #fff;
 
   font-size: 6px;
+
   font-weight: 800;
+
 }
 
 .pharmalink-header-avatar {
+
   width: 23px;
+
   height: 23px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 50%;
@@ -1456,15 +2108,19 @@
   color: #fff;
 
   font-size: 7px;
+
   font-weight: 800;
+
 }
 
 /* Mobile menu button */
 
 .pharmalink-header-mobile-button {
+
   display: none;
 
   width: 40px;
+
   height: 40px;
 
   margin-left: auto;
@@ -1472,6 +2128,7 @@
   place-items: center;
 
   border: 1px solid #dbe4e1;
+
   border-radius: 8px;
 
   background: #fff;
@@ -1479,53 +2136,81 @@
   color: #263640;
 
   cursor: pointer;
+
 }
 
 /* Mobile navigation */
 
 .pharmalink-mobile-navigation {
+
   display: none;
+
 }
 
 /* =========================================================
+
    HEADER RESPONSIVE
-========================================================= */
+
+\========================================================= */
 
 @media (max-width: 1100px) {
+
   .pharmalink-header-search {
+
     width: 230px;
+
   }
 
   .pharmalink-header-nav-item,
+
   .pharmalink-header-profile {
+
     min-width: 58px;
+
     padding-inline: 5px;
+
   }
+
 }
 
 @media (max-width: 850px) {
+
   .pharmalink-header {
+
     height: 60px;
+
   }
 
   .pharmalink-header-inner {
+
     width: calc(100% - 24px);
+
     gap: 12px;
+
   }
 
   .pharmalink-header-nav {
+
     display: none;
+
   }
 
   .pharmalink-header-mobile-button {
+
     display: grid;
+
   }
 
   .pharmalink-mobile-navigation {
+
     position: fixed;
+
     top: 60px;
+
     left: 0;
+
     right: 0;
+
     z-index: 99;
 
     display: block;
@@ -1535,29 +2220,41 @@
     background: rgba(255, 255, 255, 0.98);
 
     box-shadow:
+
       0 12px 30px rgba(23, 33, 43, 0.08);
+
   }
 
   .pharmalink-mobile-navigation-inner {
+
     width: min(100% - 24px, 700px);
+
     margin: 0 auto;
 
     padding: 10px 0;
 
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 5px;
+
   }
 
   .pharmalink-mobile-nav-item {
+
     position: relative;
 
     min-height: 52px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 5px;
 
     border-radius: 8px;
@@ -1565,28 +2262,39 @@
     color: #66757f;
 
     font-size: 9px;
+
     font-weight: 700;
 
     text-decoration: none;
+
   }
 
-  .pharmalink-mobile-nav-item:hover,
+  .pharmalink-mobile-nav-item\:hover,
+
   .pharmalink-mobile-nav-item.active {
+
     background: #eef6f2;
+
     color: #006241;
+
   }
 
   .pharmalink-mobile-nav-icon {
+
     position: relative;
 
     display: flex;
+
   }
 
   .pharmalink-mobile-avatar {
+
     width: 19px;
+
     height: 19px;
 
     display: grid;
+
     place-items: center;
 
     border-radius: 50%;
@@ -1596,84 +2304,125 @@
     color: #fff;
 
     font-size: 6px;
+
     font-weight: 800;
+
   }
+
 }
 
 @media (max-width: 560px) {
+
   .pharmalink-header-inner {
+
     width: calc(100% - 18px);
+
   }
 
   .pharmalink-header-name {
+
     display: none;
+
   }
 
   .pharmalink-header-search {
+
     flex: 1;
+
     width: auto;
+
   }
 
   .pharmalink-header-search input {
+
     font-size: 10px;
+
   }
 
   .pharmalink-mobile-navigation-inner {
+
     grid-template-columns: repeat(2, 1fr);
+
   }
+
 }
+
 /* =========================================================
+
    PHARMALINK SIDEBAR
-========================================================= */
+
+\========================================================= */
 
 .pharmalink-sidebar {
+
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
+
 }
 
 /* Profile card */
 
 .pharmalink-sidebar-profile {
+
   overflow: hidden;
 
   border: 1px solid #dce5e1;
+
   border-radius: 10px;
 
   background: #fff;
+
 }
 
 .pharmalink-sidebar-cover {
+
   height: 74px;
 
   background:
+
     linear-gradient(
+
       135deg,
+
       #006241 0%,
+
       #087a58 52%,
+
       #4169e1 140%
+
     );
+
 }
 
 .pharmalink-sidebar-profile-content {
+
   position: relative;
 
   padding: 0 17px 17px;
 
   text-align: left;
+
 }
 
 .pharmalink-sidebar-avatar {
+
   width: 62px;
+
   height: 62px;
 
   margin-top: -31px;
+
   margin-bottom: 11px;
 
   display: grid;
+
   place-items: center;
 
   border: 4px solid #fff;
+
   border-radius: 50%;
 
   background: #4169e1;
@@ -1681,53 +2430,73 @@
   color: #fff;
 
   font-size: 16px;
+
   font-weight: 800;
 
   text-decoration: none;
 
   box-shadow:
+
     0 4px 14px rgba(23, 33, 43, 0.12);
+
 }
 
 .pharmalink-sidebar-name {
+
   display: block;
 
   color: #17212b;
 
   font-size: 14px;
+
   font-weight: 800;
+
   line-height: 1.25;
 
   letter-spacing: -0.025em;
+
   text-decoration: none;
+
 }
 
-.pharmalink-sidebar-name:hover {
+.pharmalink-sidebar-name\:hover {
+
   color: #006241;
+
 }
 
 .pharmalink-sidebar-headline {
+
   margin: 5px 0 0;
 
   color: #53626d;
 
   font-size: 9px;
+
   font-weight: 600;
+
   line-height: 1.4;
+
 }
 
 .pharmalink-sidebar-organization {
+
   margin: 3px 0 14px;
 
   color: #8a969e;
 
   font-size: 8px;
+
   line-height: 1.4;
+
 }
 
 .pharmalink-sidebar-profile-link {
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   padding-top: 11px;
@@ -1737,78 +2506,103 @@
   color: #006241;
 
   font-size: 9px;
+
   font-weight: 800;
 
   text-decoration: none;
+
 }
 
-.pharmalink-sidebar-profile-link:hover {
+.pharmalink-sidebar-profile-link\:hover {
+
   color: #004f35;
+
 }
 
 /* Stats */
 
 .pharmalink-sidebar-stats {
+
   padding: 10px 14px;
 
   border: 1px solid #dce5e1;
+
   border-radius: 10px;
 
   background: #fff;
+
 }
 
 .pharmalink-sidebar-stats a {
+
   min-height: 34px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   color: #53626d;
 
   font-size: 9px;
+
   font-weight: 600;
 
   text-decoration: none;
+
 }
 
 .pharmalink-sidebar-stats a + a {
+
   border-top: 1px solid #edf1ef;
+
 }
 
 .pharmalink-sidebar-stats strong {
+
   color: #006241;
 
   font-size: 10px;
+
 }
 
 /* Navigation */
 
 .pharmalink-sidebar-navigation {
+
   padding: 8px;
 
   border: 1px solid #dce5e1;
+
   border-radius: 10px;
 
   background: #fff;
+
 }
 
 .pharmalink-sidebar-navigation-title {
+
   padding: 9px 10px 7px;
 
   color: #8a969e;
 
   font-size: 7px;
+
   font-weight: 800;
 
   letter-spacing: 0.13em;
+
 }
 
 .pharmalink-sidebar-nav-item {
+
   min-height: 39px;
 
   display: flex;
+
   align-items: center;
+
   gap: 10px;
 
   padding: 0 10px;
@@ -1818,37 +2612,941 @@
   color: #53626d;
 
   font-size: 9px;
+
   font-weight: 600;
 
   text-decoration: none;
 
   transition:
+
     color 150ms ease,
+
     background 150ms ease;
+
 }
 
 .pharmalink-sidebar-nav-item svg {
+
   flex-shrink: 0;
 
   color: #7a8992;
 
   transition: color 150ms ease;
+
 }
 
-.pharmalink-sidebar-nav-item:hover {
+.pharmalink-sidebar-nav-item\:hover {
+
+  background: #f1f7f4;
+
+  color: #006241;
+
+}
+
+.pharmalink-sidebar-nav-item\:hover svg {
+
+  color: #006241;
+
+}
+
+.pharmalink-sidebar-nav-item.active {
+
+  background: #eaf4ef;
+
+  color: #006241;
+
+}
+
+.pharmalink-sidebar-nav-item.active svg {
+
+  color: #006241;
+
+}
+
+
+/* =========================================================
+   PHARMALINK FEED — FINAL UI FIX OVERRIDES
+   ========================================================= */
+
+.feed-page,
+.feed-page * {
+  box-sizing: border-box;
+}
+
+.feed-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  color: #17212b;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.feed-page h1,
+.feed-page h2,
+.feed-page h3,
+.feed-page p {
+  margin-block-start: 0;
+}
+
+.feed-page button,
+.feed-page input,
+.feed-page textarea,
+.feed-page select {
+  font: inherit;
+}
+
+.feed-page button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Keep post menus inside their cards and above all other content. */
+.feed-post {
+  position: relative;
+  overflow: visible;
+}
+
+.feed-post-menu {
+  position: absolute;
+  top: 54px;
+  right: 12px;
+  z-index: 200;
+  width: 190px;
+  padding: 6px;
+  border: 1px solid #dce5e1;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(23, 33, 43, 0.16);
+}
+
+.feed-post-menu button {
+  width: 100%;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #33424d;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.feed-post-menu button:hover {
   background: #f1f7f4;
   color: #006241;
 }
 
-.pharmalink-sidebar-nav-item:hover svg {
+.feed-post-menu button.danger {
+  color: #b4232f;
+}
+
+.feed-post-menu button.danger:hover {
+  background: #fff1f2;
+}
+
+/* Fixed four-button action row. */
+.feed-post-actions {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  align-items: stretch;
+  border-top: 1px solid #edf1ef;
+}
+
+.feed-post-actions button {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px;
+  padding: 0 5px !important;
+  border: 0 !important;
+  background: #fff !important;
+  color: #65737d;
+  font-size: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.feed-post-actions button:hover {
+  background: #f3f7f5 !important;
   color: #006241;
 }
 
-.pharmalink-sidebar-nav-item.active {
-  background: #eaf4ef;
+.feed-post-actions button.active {
   color: #006241;
 }
 
-.pharmalink-sidebar-nav-item.active svg {
+/* Keep engagement counts in one clean row. */
+.feed-post-stats {
+  width: 100%;
+  min-height: 36px;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 16px;
+  border-top: 1px solid #edf1ef;
+  color: #8a969e;
+  font-size: 8px;
+}
+
+.feed-post-stats span {
+  min-width: 0;
+}
+
+.feed-post-stats span:last-child {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Comments must be a contained section, never loose/raw text. */
+.feed-comments {
+  width: 100%;
+  padding: 0 16px 14px;
+  border-top: 1px solid #edf1ef;
+  background: #fbfcfc;
+}
+
+.feed-comment-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 0 8px;
+}
+
+.feed-comment {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  position: relative;
+}
+
+.feed-comment-avatar {
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
+  min-height: 30px !important;
+  flex: 0 0 30px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 50% !important;
+  overflow: hidden;
+  background: #4169e1;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.feed-comment-content {
+  min-width: 0;
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 0 10px 10px 10px;
+  background: #f0f4f3;
+}
+
+.feed-comment-content strong {
+  display: block;
+  margin: 0 0 3px;
+  color: #23302e;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.feed-comment-content p {
+  display: block;
+  margin: 0;
+  color: #394743;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.feed-comment-form {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.feed-comment-form input {
+  min-width: 0;
+  flex: 1;
+  width: 100%;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid #d7e0dd;
+  border-radius: 18px;
+  outline: none;
+  background: #fff;
+  color: #273530;
+  font-size: 11px;
+}
+
+.feed-comment-form input:focus {
+  border-color: #8cbcae;
+  box-shadow: 0 0 0 3px rgba(0, 107, 80, 0.07);
+}
+
+.feed-comment-form > button {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  min-height: 34px !important;
+  flex: 0 0 34px !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: #006241 !important;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+/* Ensure the composer stays a proper card. */
+.feed-composer {
+  width: 100%;
+}
+
+.feed-composer-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.feed-composer-input {
+  min-width: 0;
+  flex: 1;
+}
+
+/* =========================================================
+   RESPONSIVE FIXES
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .feed-layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+
+  .feed-right-column {
+    display: none;
+  }
+}
+
+@media (max-width: 820px) {
+  .feed-layout {
+    width: min(100% - 24px, 700px);
+    display: block;
+  }
+
+  .feed-left-column,
+  .feed-right-column {
+    display: none;
+  }
+
+  .feed-center-column {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .feed-post-actions button {
+    height: 48px !important;
+    min-height: 48px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .feed-main {
+    padding-bottom: 80px;
+  }
+
+  .feed-post-header,
+  .feed-post-body,
+  .feed-post-tags,
+  .feed-post-stats,
+  .feed-comments {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .feed-post-actions button {
+    height: 50px !important;
+    min-height: 50px !important;
+    gap: 4px;
+    font-size: 8px;
+  }
+
+  .feed-post-actions button svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+/* =====================================================================
+   PHARMALINK FEED — PRODUCT REFINEMENT v2
+   Additive overrides only. Existing rules above remain untouched.
+   ===================================================================== */
+
+.feed-page,
+.feed-page * {
+  box-sizing: border-box;
+}
+
+/* A slightly tighter canvas puts more useful content above the fold. */
+.feed-main {
+  padding: 14px 18px 28px;
+}
+
+.feed-layout {
+  width: min(1460px, 100%);
+  grid-template-columns: 242px minmax(0, 1fr) 302px;
+  gap: 16px;
+}
+
+.feed-center-column {
+  max-width: 760px;
+}
+
+.feed-left-column,
+.feed-right-column {
+  top: 82px;
+}
+
+/* Keep the heading compact and make the menu a normal product control. */
+.feed-welcome {
+  margin-bottom: 8px;
+}
+
+.feed-heading-actions {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.feed-more-button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+}
+
+.feed-more-button:hover,
+.feed-more-button.active {
+  border-color: #dce5e1;
+  background: #fff;
+}
+
+.feed-options-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 180;
+  width: 176px;
+  padding: 5px;
+  border: 1px solid #dce5e1;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(22, 38, 33, 0.12);
+}
+
+.feed-options-menu button {
+  width: 100%;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #33434d;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.feed-options-menu button:hover:not(:disabled) {
+  background: #f2f7f5;
   color: #006241;
+}
+
+.feed-options-menu button:disabled {
+  color: #afb9be;
+  cursor: not-allowed;
+}
+
+/* More consistent feed rhythm. */
+.feed-post-list {
+  gap: 9px;
+}
+
+.feed-post {
+  border-radius: 9px;
+  box-shadow: none;
+}
+
+.feed-post-header {
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+.feed-post-body p {
+  line-height: 1.5;
+}
+
+.feed-post-actions button {
+  transition: background 120ms ease, color 120ms ease;
+}
+
+/* Post menu belongs to the card, but never changes the card's footprint. */
+.feed-post {
+  position: relative;
+  overflow: visible;
+}
+
+.feed-post-menu {
+  position: absolute;
+  top: 50px;
+  right: 11px;
+  z-index: 200;
+  width: 156px;
+  padding: 5px;
+  border: 1px solid #dce5e1;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(22, 38, 33, 0.12);
+}
+
+.feed-post-menu button {
+  width: 100%;
+  min-height: 33px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #33434d;
+  font-size: 10px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.feed-post-menu button:hover {
+  background: #f2f7f5;
+  color: #006241;
+}
+
+.feed-post-menu svg {
+  flex: 0 0 auto;
+}
+
+/* Right rail: information-dense, not promotional. */
+.feed-right-column {
+  gap: 10px;
+}
+
+.feed-discover-card {
+  border-radius: 9px;
+}
+
+.feed-discover-card .feed-card-heading {
+  padding: 12px 13px 9px;
+}
+
+.feed-discover-card .feed-job-list,
+.feed-discover-card .feed-people-list {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.feed-job-item {
+  min-height: 49px;
+}
+
+.feed-person {
+  min-height: 51px;
+}
+
+.feed-trending {
+  padding: 12px 13px;
+  border-radius: 9px;
+}
+
+.feed-trending h2 {
+  margin-bottom: 8px;
+}
+
+/* The connect control is now a real stateful button. */
+button.feed-person-connect {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.feed-person-connect.connected {
+  width: 30px;
+  border-color: #a7cbbf;
+  background: #eef7f3;
+  color: #006241;
+}
+
+.feed-person-connect.connected:hover {
+  background: #e4f1eb;
+}
+
+.feed-person-connect svg {
+  stroke-width: 2.2;
+}
+
+/* Reduce visual noise in long stretches of the page. */
+.feed-post-stats {
+  min-height: 31px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.feed-post-actions button {
+  height: 42px !important;
+  min-height: 42px !important;
+}
+
+@media (max-width: 1280px) {
+  .feed-layout {
+    grid-template-columns: 230px minmax(0, 1fr) 286px;
+  }
+
+  .feed-center-column {
+    max-width: 740px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .feed-layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .feed-center-column {
+    max-width: none;
+  }
+}
+
+@media (max-width: 820px) {
+  .feed-main {
+    padding: 12px 0 80px;
+  }
+
+  .feed-layout {
+    width: min(100% - 20px, 720px);
+  }
+
+  .feed-heading-actions {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .feed-layout {
+    width: calc(100% - 16px);
+  }
+
+  .feed-post-menu,
+  .feed-options-menu {
+    right: 6px;
+  }
+}
+
+
+/* =====================================================================
+   PHARMALINK FEED — RIGHT RAIL REFINEMENT + NEWS
+   Additive layer. Existing feed styling remains intact.
+   ===================================================================== */
+
+.feed-right-column {
+  gap: 9px;
+}
+
+/* ------------------------------------------------------------
+   PharmaLink News
+   ------------------------------------------------------------ */
+
+.feed-news-card {
+  overflow: hidden;
+  border: 1px solid #dce5e2;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+.feed-news-heading {
+  min-height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 13px 9px;
+  border-bottom: 1px solid #e7ecea;
+}
+
+.feed-news-heading > div {
+  min-width: 0;
+}
+
+.feed-news-heading span {
+  display: block;
+  margin-bottom: 3px;
+  color: #006241;
+  font-size: 7px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.feed-news-heading h2 {
+  margin: 0;
+  color: #263640;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.feed-news-heading > svg {
+  flex: 0 0 auto;
+  color: #006241;
+  stroke-width: 1.9;
+}
+
+.feed-news-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-news-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 8px;
+  row-gap: 4px;
+  min-height: 66px;
+  padding: 10px 13px;
+  border-bottom: 1px solid #edf1ef;
+  background: #fff;
+  color: #263640;
+  text-decoration: none;
+  transition: background 120ms ease;
+}
+
+.feed-news-item:hover {
+  background: #f8fbfa;
+}
+
+.feed-news-item.featured {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.feed-news-category {
+  grid-column: 1 / -1;
+  color: #4169e1;
+  font-size: 7px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.feed-news-item strong {
+  min-width: 0;
+  grid-column: 1;
+  color: #263640;
+  font-size: 10px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.feed-news-item.featured strong {
+  font-size: 11px;
+}
+
+.feed-news-time {
+  align-self: end;
+  grid-column: 2;
+  color: #8a969e;
+  font-size: 7px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.feed-news-footer {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 13px;
+  color: #006241;
+  font-size: 8px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.feed-news-footer:hover {
+  color: #004f35;
+}
+
+/* ------------------------------------------------------------
+   Right rail card consistency
+   ------------------------------------------------------------ */
+
+.feed-right-column .feed-discover-card,
+.feed-right-column .feed-trending {
+  border-radius: 9px;
+}
+
+.feed-right-column .feed-card-heading {
+  padding: 11px 13px 9px;
+}
+
+.feed-right-column .feed-card-heading span {
+  font-size: 7px;
+}
+
+.feed-right-column .feed-card-heading h2 {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.feed-right-column .feed-research-feature {
+  padding: 12px 13px 8px;
+}
+
+.feed-right-column .feed-research-feature strong {
+  margin-top: 5px;
+  font-size: 10px;
+  line-height: 1.38;
+}
+
+.feed-right-column .feed-research-feature p {
+  margin: 5px 0 9px;
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+.feed-right-column .feed-research-feature a,
+.feed-right-column .feed-card-footer-link {
+  font-size: 8px;
+}
+
+.feed-right-column .feed-job-item {
+  min-height: 47px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.feed-right-column .feed-job-item strong {
+  font-size: 8px;
+}
+
+.feed-right-column .feed-job-item span {
+  margin-top: 2px;
+  font-size: 7px;
+}
+
+.feed-right-column .feed-person {
+  min-height: 48px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.feed-right-column .feed-person-avatar {
+  width: 31px;
+  height: 31px;
+  font-size: 7px;
+}
+
+.feed-right-column .feed-person-info strong {
+  font-size: 8px;
+}
+
+.feed-right-column .feed-person-info span {
+  margin-top: 1px;
+  font-size: 6px;
+}
+
+.feed-right-column .feed-person button {
+  width: 23px;
+  height: 23px;
+  font-size: 14px;
+}
+
+.feed-right-column .feed-trending {
+  padding: 11px 13px;
+}
+
+.feed-right-column .feed-trending > span {
+  font-size: 7px;
+}
+
+.feed-right-column .feed-trending h2 {
+  margin: 5px 0 9px;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.feed-right-column .feed-trending-tags {
+  gap: 5px;
+}
+
+.feed-right-column .feed-trending-tags span {
+  padding: 5px 7px;
+  font-size: 6px;
+}
+
+/* The bottom profile prompt should feel like a task, not another ad. */
+.feed-right-column .feed-network-copy {
+  margin: 11px 13px 12px;
+  color: #4e5d65;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.feed-right-column .feed-discover-card .feed-card-footer-link {
+  min-height: 34px;
+  margin-top: 0;
+  padding: 0 13px;
+}
+
+/* Keep the right rail visually calm: no heavy shadow or decorative effects. */
+.feed-right-column .feed-news-card,
+.feed-right-column .feed-discover-card,
+.feed-right-column .feed-trending {
+  box-shadow: none;
+}
+
+@media (max-width: 1180px) {
+  .feed-news-item {
+    min-height: 62px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .feed-news-card {
+    display: none;
+  }
 }

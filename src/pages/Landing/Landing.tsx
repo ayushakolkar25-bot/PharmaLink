@@ -6,7 +6,6 @@ import {
   FlaskConical,
   GraduationCap,
   Menu,
-  MessageCircle,
   Network,
   Search,
   ShieldCheck,
@@ -141,13 +140,6 @@ function Landing() {
         .pharma-container {
           width: min(1180px, calc(100% - 40px));
           margin-inline: auto;
-        }
-
-        .pharma-grid {
-          background-image:
-            linear-gradient(rgba(0, 98, 65, 0.035) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 98, 65, 0.035) 1px, transparent 1px);
-          background-size: 48px 48px;
         }
 
         .pharma-card {
@@ -341,10 +333,7 @@ function Landing() {
 
             <div className="pharma-container relative grid min-h-[650px] items-center gap-14 py-20 lg:grid-cols-[0.88fr_1.12fr] lg:py-24">
               <div className="max-w-[570px]">
-                <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#b9d9cd] bg-[#f2faf7] px-3.5 py-2 text-[9px] font-extrabold tracking-[0.16em] text-[#006241]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#006241]" />
-                  THE PROFESSIONAL NETWORK FOR PHARMACY
-                </div>
+
 
                 <h1 className="max-w-[650px] text-[clamp(3.2rem,6vw,5.4rem)] font-extrabold leading-[0.93] tracking-[-0.065em] text-[#17212b]">
                   Where pharmacy
@@ -604,13 +593,13 @@ function Landing() {
               </div>
 
               <div className="flex flex-col justify-center">
-                <p className="max-w-[550px] text-[15px] leading-[1.8] text-[#687681]">
+                <h6 className="max-w-[550px] text-[15px] leading-[1.8] text-[#687681]">
                   The pharmacy ecosystem is full of talented
                   people, important research, career
                   opportunities, and valuable conversations.
                   PharmaLink brings those professional
                   connections into one focused environment.
-                </p>
+                </h6>
 
                 <div className="mt-9 max-w-[550px] divide-y divide-[#e4ebe8] border-y border-[#e4ebe8]">
                   {[
@@ -1223,109 +1212,97 @@ function Landing() {
         {/* =====================================================
             FOOTER
         ====================================================== */}
-
-        <footer className="bg-[#172733] text-white">
-          <div className="pharma-container grid gap-12 py-14 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
-            <div>
+        <footer className="overflow-hidden rounded-b-[10px] bg-[#172b39] text-[#d1dbe2]">
+          <div className="px-5 md:px-10">
+            {/* Top row: Logo and copyright */}
+            <div className="flex flex-col gap-5 py-[18px] sm:flex-row sm:items-center sm:justify-between">
               <Link
                 to="/"
-                className="flex items-center gap-2"
-              >
-                <span className="grid h-8 w-8 place-items-center rounded-md bg-[#006241] text-[11px] font-extrabold">
-                  P
-                </span>
-
-                <span className="text-[13px] font-extrabold">
-                  Pharma<span className="text-[#52b89a]">
-                    Link
-                  </span>
-                </span>
+                className="inline-flex w-fit items-center rounded-md bg-[#007653] px-3 py-3 text-[23px] font-extrabold leading-none tracking-[-0.04em] text-white"
+              > 
+              PharmaLink  
               </Link>
+              <span className="text-[16px] font-normal">
+                © 2026 PharmaLink
+              </span>
+            </div>
+            <div className="border-t border-white/20" />
+            {/* Footer navigation */}
+            <div className="grid grid-cols-1 gap-8 py-10 sm:grid-cols-2 lg:grid-cols-3">
+              {/* Platform */}
+              <div>
+                <h3 className="text-[20px] font-medium leading-6 !text-[#D1D5DB]">
+                  Platform
+                </h3>
+                <div className="mt-1 flex flex-col items-start gap-0.5 text-[17px] leading-6 text-[#c2cdd5]">
+                  <Link to="/about" className="hover:text-white">About</Link>
+                  <a href="#network" className="hover:text-white">Professional Network</a>
+                  <a href="#jobs" className="hover:text-white">Jobs &amp; Internships</a>
+                  <a href="#communities" className="hover:text-white">Communities</a>
+                </div>
+              </div>
 
-              <p className="mt-5 max-w-[260px] text-[10px] leading-[1.7] text-white/45">
-                The professional network built for
-                pharmacy.
-              </p>
+              {/* Resources */}
+              <div>
+                <h3 className="text-[20px] font-medium leading-6 !text-[#D1D5DB]">
+                  Resources
+                </h3>
+                <div className="mt-1 flex flex-col items-start gap-0.5 text-[17px] leading-6 text-[#c2cdd5]">
+                  <Link to="/help" className="hover:text-white">Help Center</Link>
+                  <Link to="/contact" className="hover:text-white">Contact Us</Link>
+                  <Link to="/accessibility" className="hover:text-white">Accessibility</Link>
+                  <Link to="/community-guidelines" className="hover:text-white">Community Guidelines</Link>
+                </div>
+              </div>
+
+              {/* Legal */}
+              <div>
+                <h3 className="text-[20px] font-medium leading-6 !text-[#D1D5DB]">
+                  Legal
+                </h3>  
+                <div className="mt-1 flex flex-col items-start gap-0.5 text-[17px] leading-6 text-[#c2cdd5]">
+                  <Link to="/user-agreement" className="hover:text-white">
+                    User Agreement
+                  </Link>
+                  <Link to="/privacy" className="hover:text-white">
+                    Privacy Policy
+                    </Link>
+                  <Link to="/cookie-policy" className="hover:text-white">
+                    Cookie Policy
+                  </Link>
+                  <Link to="/copyright-policy" className="hover:text-white">
+                    Copyright Policy
+                  </Link>
+                  <Link to="/brand-guidelines" className="hover:text-white">
+                    Brand Guidelines
+                  </Link>
+                </div>
+              </div>
             </div>
 
-            <div>
-              <div className="text-[8px] font-extrabold tracking-[0.12em] text-white/40">
-                EXPLORE
-              </div>
-
-              <div className="mt-4 space-y-3 text-[10px] text-white/65">
-                <a href="#network" className="block hover:text-white">
-                  Network
-                </a>
-                <a href="#jobs" className="block hover:text-white">
-                  Jobs
-                </a>
-                <a href="#research" className="block hover:text-white">
-                  Research
-                </a>
-                <a href="#communities" className="block hover:text-white">
-                  Communities
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <div className="text-[8px] font-extrabold tracking-[0.12em] text-white/40">
-                PHARMALINK
-              </div>
-
-              <div className="mt-4 space-y-3 text-[10px] text-white/65">
-                <Link to="/register" className="block hover:text-white">
-                  Join
-                </Link>
-                <Link to="/login" className="block hover:text-white">
-                  Log in
-                </Link>
-                <a href="#network" className="block hover:text-white">
-                  About
-                </a>
-                <a href="#network" className="block hover:text-white">
-                  Contact
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <div className="text-[8px] font-extrabold tracking-[0.12em] text-white/40">
-                LEGAL
-              </div>
-
-              <div className="mt-4 space-y-3 text-[10px] text-white/65">
-                <a href="#network" className="block hover:text-white">
-                  Privacy
-                </a>
-                <a href="#network" className="block hover:text-white">
-                  Terms
-                </a>
-                <a href="#network" className="block hover:text-white">
-                  Help
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-white/10">
-            <div className="pharma-container flex flex-col gap-3 py-5 text-[8px] text-white/35 sm:flex-row sm:items-center sm:justify-between">
+            <div className="border-t border-white/20" />
+            {/* Bottom row */}
+            <div className="flex flex-col gap-4 py-10 text-[16px] sm:flex-row sm:items-center sm:justify-between">
               <span>
-                © 2026 PharmaLink. Built for the pharmacy
-                community.
+                © 2026 PharmaLink Corporation
               </span>
 
-              <span className="flex items-center gap-1.5">
-                <MessageCircle size={11} />
-                Connect. Discover. Grow.
-              </span>
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 text-[16px] font-medium text-[#c2cdd5] hover:text-white"
+                onClick={() => {}}
+              >
+                Language
+                <span className="text-[18px] leading-none">⌄</span>
+              </button>
             </div>
+
           </div>
         </footer>
-      </div>
-    </div>
-  )
-}
-
+    </div>    
+  </div>  
+        
+)
+}       
+  
 export default Landing
