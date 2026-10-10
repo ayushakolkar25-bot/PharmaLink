@@ -10,6 +10,11 @@ import Login from '../pages/Auth/Login'
 import Register from '../pages/Auth/Register'
 import Feed from '../pages/Feed/Feed'
 import Profile from '../pages/Profile/Profile'
+import PrivacyPolicy from "../pages/PivacyPolicy/PrivacyPolicy"
+import CopyrightPolicy from "../pages/CopyrightPolicy/CopyrightPolicy"
+import Accessibility from '../pages/Accessibility/Accessibility'
+import CommunityGuidelines from '../pages/CommunityGuidelines/CommunityGuidelines'
+
 
 import { AuthProvider } from '../stores/authStore'
 
@@ -47,6 +52,26 @@ function AppRouter() {
           <Route
             path="/register"
             element={<Register />}
+          />
+
+          <Route
+            path="/privacy-policy"
+            element={<PrivacyPolicy />}
+          />
+
+          <Route
+            path="/copyright-policy"
+            element={<CopyrightPolicy />}
+          />
+
+          <Route
+            path="/accessibility"
+            element={<Accessibility />}
+          />
+
+          <Route
+            path="/community-guidelines"
+            element={<CommunityGuidelines />}
           />
 
           {/* Fallback */}
