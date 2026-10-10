@@ -3,8 +3,6 @@ import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 
-const GREEN = "#007653";
-const NAVY = "#172b39";
 
 function PolicySection({
   id,
@@ -52,24 +50,7 @@ function PolicyLink({
   );
 }
 
-function ExternalLink({
-  href,
-  children,
-}: {
-  href: string;
-  children: ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="font-medium text-[#0876bd] underline-offset-2 hover:underline"
-    >
-      {children}
-    </a>
-  );
-}
+
 
 function FooterLinks() {
   const links = [
