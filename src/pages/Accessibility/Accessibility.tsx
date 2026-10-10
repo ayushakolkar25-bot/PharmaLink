@@ -7,7 +7,6 @@ import {
   MessageSquareText,
   Target,
   BookOpen,
-  ShieldCheck,
   Eye,
   Keyboard,
   Monitor,

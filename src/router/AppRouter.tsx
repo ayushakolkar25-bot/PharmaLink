@@ -6,7 +6,6 @@ import {
 } from 'react-router-dom'
 
 import Landing from '../pages/Landing/Landing'
-import AuthLayout from '../pages/Auth/AuthLayout'
 import Login from '../pages/Auth/Login'
 import Register from '../pages/Auth/Register'
 import Feed from '../pages/Feed/Feed'
@@ -40,20 +39,15 @@ function AppRouter() {
           />
 
           {/* Authentication */}
+          <Route
+            path="/login"
+            element={<Login />}
+          />
 
           <Route
-            element={<AuthLayout />}
-          >
-            <Route
-              path="/login"
-              element={<Login />}
-            />
-
-            <Route
-              path="/register"
-              element={<Register />}
-            />
-          </Route>
+            path="/register"
+            element={<Register />}
+          />
 
           {/* Fallback */}
 

@@ -14,9 +14,6 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-const GREEN = "#007653";
-const NAVY = "#172b39";
-
 function PolicyLink({
   to,
   children,

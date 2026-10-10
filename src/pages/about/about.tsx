@@ -11,10 +11,6 @@ import {
 import { FaLinkedin, FaYoutube , FaInstagram } from "react-icons/fa";
 import { useState } from "react";
 
-const GREEN = "#007653";
-const NAVY = "#142a38";
-const SILVER = "#84939e";
-
 const images = {
   hero: "/images/ayush-hero.png",
   about: "/images/ayush-about.png",

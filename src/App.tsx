@@ -1,18 +1,13 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Landing from '../src/pages/Landing/Landing'
-import About from '../src/pages/about/about'
-import UserAgreement from "../src/pages/UserAgreement/UserAgreement";
 
-function AppRouter() {
+import AppRouter from './router/AppRouter'
+import { AuthProvider } from './stores/authStore'
+
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/user-agreement" element={<UserAgreement />} />
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
   )
 }
 
-export default AppRouter
+export default App
